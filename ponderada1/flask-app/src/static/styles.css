@@ -1,0 +1,54 @@
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+  .content {
+    width: 60%;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    margin: 20px auto;
+  }
+  .contact {
+    display: flex;
+    border-radius: 5px;
+    background-color: #add8e6;
+  }
+  .photo-img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  .item{
+    margin-top: 10px;
+    display: flex;
+  }
+  #edit-button {
+    display: none;
+  }
+ 
+  .link-view-photo {
+    cursor: pointer;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 4px;
+    transition: 150ms;
+  }
+  .link-view-photo:hover {
+    opacity: 0.3;
+  }
+  .contact .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 1200px) {
+    .content {
+      width: 90%;
+    }
+  }
