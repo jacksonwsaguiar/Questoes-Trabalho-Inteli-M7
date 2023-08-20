@@ -1,15 +1,35 @@
-<img src="../assets/logo-inteli.png" alt="Logo do Inteli"/>
+## Getting Started
 
-# Atividade 2: Deploy de uma API que realiza CRUD na núvem
+1. Clone this repository to your local machine.
 
-## Enunciado
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
 
-Esta atividade tem por objetivo desenvolver um projeto web que possibilite os usuários registrarem dados em um banco de dados. O deploy do banco, da API do backend e do frontend deve acontecer utilizando uma nuvem comercial. A aplicação não precisa utilizar frameworks, pode ser realizada utilizando os primitivos presentes na linguagem de programação escolhida.
+## Iniciando os containers
+docker-compose up -d
 
-## Padrão de qualidade
+## Arquitetura
+A aplicação é projetada com uma arquitetura de microsserviços, composta pelos seguintes componentes:
 
-***TODO***
-
-## Instruções:
-
-***TODO***
+Frontend: Interfaces web login e homem desenvolvidas com HTML, CSS e JavaScript.
+Back-end: Um servidor Node.js responsável pela manipulação da API e pelas interações do banco de dados.
+Banco de dados: Um banco de dados PostgreSQL usado para armazenar informações e tasks do usuário.
+Essa arquitetura foi escolhida para aprimorar a escalabilidade, separar preocupações e encapsular a funcionalidade em contêineres isolados.
+# Estrutura do projeto
+my-dockerized-app/
+├── database/
+│   ├── Dockerfile
+├── frontend/
+│   ├── Dockerfile
+│   ├── login
+│   ├── home
+│   └── ...
+├── backend/
+│   ├── Dockerfile
+│   ├── app.js
+│   ├── package.json
+│   └── ...
+├── docker-compose.yml
+└── README.md
