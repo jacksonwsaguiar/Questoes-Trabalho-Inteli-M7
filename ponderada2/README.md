@@ -22,6 +22,17 @@ docker-compose up -d
 
 -d: modo detach, após execução dos containers o terminal é liberado.
 
+## Sobre a aplicação
+### Login
+Utilize as seguintes credenciais para se autenticar na aplicacão:<br />
+Email: chukwueze@gmail.com<br />
+Senha: 1234
+### Funcionamento
+Pós autenticação feita, será redirecionada para tela home, onde será possível:<br />
+-adicionar uma nota: adicione um titulo para a nota na caixa de texto, clique em adicionar;<br />
+-marcar como feita: clique sobre a nota que deseja marcar como feita;<br />
+-deletar: clique no "X" para excluir uma nota. <br />
+
 ## Arquitetura
 A aplicação é projetada com uma arquitetura de microsserviços, composta pelos seguintes componentes:<br />
 

@@ -1,6 +1,7 @@
 version: '1.0'
 services:
   database:
+    restart: always
     image: postgres:latest
     container_name: database-container
     environment:
@@ -13,6 +14,7 @@ services:
       - db_data:/var/lib/postgresql/data
 
   backend:
+    restart: always
     build:
       context: ./backend
     ports:
@@ -25,6 +27,8 @@ services:
       - ./backend:/app
 
   frontend:
+    restart: always
+    image: frontend-image
     build:
       context: ./frontend
     depends_on:

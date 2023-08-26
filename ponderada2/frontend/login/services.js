@@ -26,17 +26,10 @@ form.addEventListener("submit", async (event) => {
       const result = await response.json();
    
       localStorage.setItem("token", result.data.token);
-      window.location.href = `/frontend/home`;
+      window.location.href = `/`;//home
     } catch (error) {
-      alert("error login");
+      alert("Verifique suas credenciais e tente novamente");
     }
   }
 
-  // output.innerHTML = message;
-  // localStorage.setItem('token', token);
-
-  // const storedUsername = localStorage.getItem('token');
-  // if (storedUsername) {
-  //   storedUsernameSpan.textContent = storedUsername;
-  // }
 });
