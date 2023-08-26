@@ -3,7 +3,7 @@ var crypt = require("bcryptjs");
 
 const connection = new Pool({
   user: "postgres",
-  host: "127.0.0.1",
+  host: "database-container",
   database: "postgres",
   password: "1234",
   port: 5432, // PostgreSQL default port

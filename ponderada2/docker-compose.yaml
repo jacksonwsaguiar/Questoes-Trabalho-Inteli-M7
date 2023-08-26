@@ -2,6 +2,7 @@ version: '1.0'
 services:
   database:
     image: postgres:latest
+    container_name: database-container
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
@@ -26,6 +27,8 @@ services:
   frontend:
     build:
       context: ./frontend
+    depends_on:
+      - backend
     ports:
       - "80:80"
     volumes:
