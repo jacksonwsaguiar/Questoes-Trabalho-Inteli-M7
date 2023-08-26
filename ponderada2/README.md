@@ -40,6 +40,6 @@ ponderada2/<br />
 │   ├── Dockerfile<br />
 │   ├── app.js<br />
 │   ├── package.json<br />
-│   └── ...
+│   └── ...<br />
 ├── docker-compose.yml<br />
 └── README.md<br />
