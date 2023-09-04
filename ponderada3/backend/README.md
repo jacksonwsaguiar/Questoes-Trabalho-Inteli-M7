@@ -41,7 +41,7 @@ A imagem Docker para esta aplicação está disponível no Docker Hub. Você pod
 ```
 - Em seguida
 ```bash
-   docker run -p 80:80 jacksonaguiar/fastapiml
+   docker run -p 8000:80 jacksonaguiar/fastapiml
 ```
 ## Machine Learnig
 
