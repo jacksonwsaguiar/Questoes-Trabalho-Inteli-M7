@@ -1,0 +1,42 @@
+version: '1.0'
+services:
+  database:
+    restart: always
+    image: postgres:latest
+    container_name: database-container
+    environment:
+      POSTGRES_DB: ponderada
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    restart: always
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgres://postgres:1234@database:5432/ponderada
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    restart: always
+    image: frontend-image
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+
+volumes:
+  db_data:

@@ -1,15 +1,56 @@
-<img src="../assets/logo-inteli.png" alt="Logo do Inteli"/>
+## Getting Started
 
-# Atividade 4: Construção de Dashboard para Visualização de Dados
+Para clonar o projeto em sua máquina
 
-## Enunciado
+```bash
+git clone https://github.com/jacksonwsaguiar/Questoes-Trabalho-Inteli-M7.git
+cd Questoes-Trabalho-Inteli-M7
+```
+## Docker Imagens
 
-Esta atividade tem por objetivo realizar a integração das demais atividades desenvolvidas. Ela será o frontend de visualização de dados do modelo disponibilizado. Esta interface deverá consumir os dados disponibilizados da atividade ponderada 3. O acesso a este dashboard deverá acontecer mediante ao login do usuário, conforme desenvolvido na atividade ponderada 2.
+-backend: https://hub.docker.com/repository/docker/jacksonaguiar/backend-image
+<br />
+-frontend: https://hub.docker.com/repository/docker/jacksonaguiar/frontend-image
+<br />
 
-## Padrão de qualidade
+Para obter as imagens:
+```bash
+docker pull jacksonaguiar/image
+```
+## Iniciando os containers
+docker-compose up -d
 
-***TODO***
+-d: modo detach, após execução dos containers o terminal é liberado.
 
-## Instruções:
+## Sobre a aplicação
+É uma adapatação dos outros projetos desenvolvido nas demais ponderada.
+### Login
+Utilize as seguintes credenciais para se autenticar na aplicacão:<br />
+Email: chukwueze@gmail.com<br />
+Senha: 1234
 
-***TODO***
+### Dashboard
+Contem todas as informações e analises do arquivo "mall_customers.csv"
+## Arquitetura
+A aplicação é projetada com uma arquitetura de microsserviços, composta pelos seguintes componentes:<br />
+
+Frontend: Interfaces web login e dashboard desenvolvidas com HTML, CSS e JavaScript. Um servidor nginx é usado para executar a aplicação.<br />
+Back-end: Um servidor Node.js responsável pela manipulação da API e pelas interações do banco de dados.<br />
+Banco de dados: Um banco de dados PostgreSQL usado para armazenar informações como credenciais de login e tasks do usuário.<br />
+Essa arquitetura foi escolhida para aprimorar a escalabilidade, separar preocupações e encapsular a funcionalidade em contêineres isolados, assim facilita a manutenção da aplicação, além de um serviço não atrapalhar o outro.
+# Estrutura do projeto
+ponderada2/<br />
+├── frontend/<br />
+│   ├── Dockerfile<br />
+│   ├── login<br />
+│   ├── home<br />
+│   └── ...<br />
+├── backend/<br />
+│   ├── files/<br />
+│   │   ├── mall_customers.csv<br />
+│   ├── Dockerfile<br />
+│   ├── app.js<br />
+│   ├── package.json<br />
+│   └── ...<br />
+├── docker-compose.yml<br />
+└── README.md<br />
